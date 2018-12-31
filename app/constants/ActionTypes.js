@@ -1,0 +1,1 @@
+export const SET_SEARCH_ENGINE = 'SET_SEARCH_ENGINE';

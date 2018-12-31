@@ -1,0 +1,39 @@
+{
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/extension-icon-16.png",
+    "48": "icons/extension-icon-48.png",
+    "128": "icons/extension-icon-128.png"
+  },
+  "web_accessible_resources": [
+    "js/page.bundle.js"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+    "chrome_url_overrides": {
+      "newtab": "window.html"
+  },
+  "permissions": [
+    "topSites",
+    "history",
+    "contextMenus",
+    "management",
+    "tabs",
+    "storage",
+    "https://github.com/*",
+    "https://www.google.com/",
+    "<all_urls>",
+    "management",
+    "chrome://favicon/https://www.youtube.com/feed/subscriptions",
+    "unlimitedStorage",
+    "webNavigation",
+    "webRequest",
+    "downloads"
+  ],
+  "content_security_policy": "default-src 'self';script-src 'self' http://localhost:3000 https://localhost:3000 'unsafe-eval';connect-src https://www.google.com/ ws://localhost:3000 http://localhost:3000 https://localhost:3000;style-src * 'unsafe-inline' 'self' blob:;img-src https://www.google.com/ 'self' data:;object-src 'self'"
+}
